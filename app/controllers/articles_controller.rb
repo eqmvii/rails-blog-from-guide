@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
-
+    @article = Article.new # Needed to prevent the view error check from throing an error (@article.errors.any? )
   end
 
   def create
