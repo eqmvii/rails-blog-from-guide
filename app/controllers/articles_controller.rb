@@ -19,9 +19,18 @@ class ArticlesController < ApplicationController
     # @article = Article.new(params[:article]) # Won't work due to strong parameters
 
     @article = Article.new(article_params)
+    success = @article.save
 
-    @article.save # returns true/false based on whether or not the save worked
-    redirect_to @article # will redirect to the show action
+    puts "Start ===="
+    puts "Did it work?"
+    puts success ? "Yes!" : "No..."
+    puts "==== end"
+
+    if success
+      redirect_to @article # will redirect to the show action
+    else
+      render 'new'
+    end
   end
 
   def destroy

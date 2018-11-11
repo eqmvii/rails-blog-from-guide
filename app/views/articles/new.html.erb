@@ -1,4 +1,6 @@
 <h1>New Article</h1>
+<p>Title must have at least 5 characters!</p>
+
 <!-- note for later: local: true turns off auto-ajax behavior -->
 <%= form_with scope: :article, url: articles_path, local: true do |form| %>
   <p>
@@ -17,5 +19,5 @@
 <% end %>
 
 <p>
-  <%= link_to "See all articles", "/articles" %> <%# TODO: Find a better path helper to link to all articles %>
+  <%= link_to "Back to all articles", articles_path %>
 </p>
