@@ -2,7 +2,7 @@
 
 Built following the tutorial at: https://guides.rubyonrails.org/getting_started.html
 
-Current step: 5.3 Creating articles
+Current step: 5.11 Updating Articles
 
 # Commands:
 
