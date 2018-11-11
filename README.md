@@ -15,3 +15,17 @@ Show all existing HTTP routes:
 > bin/rails generate controller Welcome index
 
 > rails generate controller Articles
+
+> rails generate model Article title:string text:text
+
+> rails db:migrate
+
+# On Migrations
+
+In general:
+
+> rails db:migrate
+
+To run in production:
+
+> rails db:migrate RAILS_ENV=production
