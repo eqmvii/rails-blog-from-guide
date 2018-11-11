@@ -1,6 +1,10 @@
 class ArticlesController < ApplicationController
   # Recommended order: index, show, new, edit, create, update and destroy
 
+  def index
+    @articles = Article.all
+  end
+
   def show
     @article = Article.find(params[:id])
   end
@@ -18,6 +22,11 @@ class ArticlesController < ApplicationController
 
     @article.save # returns true/false based on whether or not the save worked
     redirect_to @article # will redirect to the show action
+  end
+
+  def destroy
+    Article.destroy(params[:id])
+    redirect_to @article
   end
 
   private

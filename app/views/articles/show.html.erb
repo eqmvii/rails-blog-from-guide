@@ -1,4 +1,21 @@
 <p>
-  <strong>Title: </strong> <%= @article.title %>
-  <strong>Text: </strong> <%= @article.text %>
+  <strong><%= @article.title %></strong>
+</p>
+
+<p>
+  <%= @article.text %>
+</p>
+
+<hr />
+  <%#= link_to "Delete this article", article_path([:destroy, @article.id]) %> <%# TODO FIGURE THIS OUT %>
+  <a href="/destroy/<%= @article.id %>">Delete This Article</a>
+  <%# doesn't work at all also woooo GET for deleting hrmph %>
+<hr />
+
+<p>
+  <%= link_to "Create a new article", article_path(:new) %>
+</p>
+
+<p>
+  <%= link_to "See All Articles", "/articles" %> <%# TODO: Find a better path helper to link to all articles %>
 </p>
