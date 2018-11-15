@@ -14,6 +14,8 @@
       <td><%= article.title %></td>
       <td><%= link_to 'Show', article_path(article) %></td>
       <td><%= link_to 'Edit', edit_article_path(article) %></td> <%# lol that's really how the helpers work... ok... %>
+      <td><%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: "Are you sure?" } %></td> <%# lol that's really how the helpers work... ok... %>
+
     </tr>
   <% end %>
 </table>
