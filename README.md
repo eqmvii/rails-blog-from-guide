@@ -2,7 +2,7 @@
 
 Built following the tutorial at: https://guides.rubyonrails.org/getting_started.html
 
-Current step: 5.11 Updating Articles
+Current step: 6 Adding a second model
 
 # Commands:
 
