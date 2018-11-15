@@ -5,6 +5,10 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   def show
     @article = Article.find(params[:id])
   end
@@ -33,6 +37,16 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def update
+    @article = Article.find(params[:id])
+
+    if @article.update(article_params)
+      redirect_to @article
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
     Article.destroy(params[:id])
     redirect_to @article
@@ -41,6 +55,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit([:title, :text])
+    params.require(:article).permit([:title, :text]) # Magic to handle form safety in a Rails app
   end
 end
