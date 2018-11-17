@@ -19,11 +19,11 @@
 <hr />
 
 <p>
-  <%= link_to 'Edit This Article', edit_article_path(@article) %>
+  <%= link_to 'Edit this article', edit_article_path(@article) %>
 </p>
 
 <p>
-  <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= link_to 'Delete this article', article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
 </p>
 
 <hr />
@@ -33,5 +33,5 @@
 </p>
 
 <p>
-  <%= link_to "Back to all Articles", articles_path %>
+  <%= link_to "Back to all articles", articles_path %>
 </p>
