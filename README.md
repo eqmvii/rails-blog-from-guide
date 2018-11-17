@@ -20,6 +20,16 @@ Show all existing HTTP routes:
 
 > rails db:migrate
 
+Adding a second model:
+
+> rails generate model Comment commenter:string body:text article:references
+
+And then:
+
+> rails db:migrate
+
+> rails generate controller Comments
+
 # On Migrations
 
 In general:
@@ -29,3 +39,4 @@ In general:
 To run in production:
 
 > rails db:migrate RAILS_ENV=production
+
